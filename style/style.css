@@ -42,11 +42,22 @@ body{
 }
 
 
-#dropdownMenuLink{
-    background-color: white;
+.dropdown{
+    background-color: whitesmoke;
     color: black;
     border: transparent;
     box-shadow: none;
+    position: absolute;
+    margin-left: -19rem;
+    margin-top: 0.5rem;
+    
+}
+
+.sendButtom{
+    background-color: rgb(235, 235, 235);
+    margin-left: 5rem;
+    position: relative;
+    
 }
 
 #searchBackground{

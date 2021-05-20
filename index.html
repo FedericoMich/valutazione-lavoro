@@ -9,6 +9,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<script type="module">
+  import { SearchFunction } from "./js/main-module.js";
+  window.SearchFunction = SearchFunction;
+
+</script>
+
 
 <body>
 
@@ -20,24 +28,22 @@
     <div id="searchDiv">
       <div id="back">
         <form id="myForm" class="d-flex">
-          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              GET
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">POST</a></li>
-              <li><a class="dropdown-item" href="#">PUT</a></li>
-              <li><a class="dropdown-item" href="#">DELETE</a></li>
-              <li><a class="dropdown-item" href="#">INFO</a></li>
-              <li><a class="dropdown-item" href="#">DUMB</a></li>
-            </ul>
-          </div>
-          <input type="text" class="btn btn-light" placeholder="www.yoursite.com/home/index.php" id="findtext">
-          <input type="button" class="btn btn-primary" value="SEND" onclick='SearchFuncation()'>
-        </form>
+          <select class="dropdown">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+            <option value="INFO">INFO</option>
+            <option value="DUMB">DUMB</option>
+          </select>
       </div>
+      <div class="sendButtom">
+      <input type="text" class="btn btn-light" placeholder="www.yoursite.com/home/index.php" id="findtext">
+      <input type="button" class="btn btn-primary" value="SEND" onclick='SearchFunction()'>
     </div>
+      </form>
+    </div>
+  </div>
   </div>
 
   <div id="Mcontainer">
@@ -53,7 +59,7 @@
 
                 <div id="cardBackground">
                   <li>DOMAIN
-                    <p id="text1">test</p>
+                    <p id="textDomain"></p>
                   </li>
                 </div>
 
@@ -126,11 +132,11 @@
 
 
     <div id="shareContainer">
-      
+
       <h3 class="share">SHARE</h3>
       <div id="shareBackground">
-      <h4 class="shareText">httprequest.com/1a54da684864</h4>
-    </div>
+        <h4 class="shareText">httprequest.com/1a54da684864</h4>
+      </div>
     </div>
 
 
