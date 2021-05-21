@@ -12,8 +12,9 @@
 </head>
 
 <script type="module">
-  import { SearchFunction } from "./js/main-module.js";
-  window.SearchFunction = SearchFunction;
+  import { searchFunction } from "./js/main-module.js";
+  window.searchFunction = searchFunction;
+
 
 </script>
 
@@ -38,9 +39,9 @@
           </select>
       </div>
       <div class="sendButtom">
-      <input type="text" class="btn btn-light" placeholder="www.yoursite.com/home/index.php" id="findtext">
-      <input type="button" class="btn btn-primary" value="SEND" onclick='SearchFunction()'>
-    </div>
+        <input type="text" class="btn btn-light" placeholder="www.yoursite.com/home/index.php" id="findtext">
+        <input type="button" class="btn btn-primary" value="SEND" onclick='searchFunction()'>
+      </div>
       </form>
     </div>
   </div>
@@ -65,12 +66,12 @@
 
                 <div id="cardBackground">
                   <li>SCHEME
-                    <p id="text1">test</p>
+                    <p id="textScheme">test</p>
                   </li>
                 </div>
                 <div id="cardBackground">
                   <li>PATH
-                    <p id="text1">test</p>
+                    <p id="textPath">test</p>
                   </li>
                 </div>
               </ul>
